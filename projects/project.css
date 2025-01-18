@@ -1,0 +1,26 @@
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em,1fr));
+    gap: 1em; /* Add spacing between grid items */
+    color: wheat
+}
+
+article {
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+}
+
+h1 {
+    font-size: 300%; /* Make h1 significantly larger */
+    font-weight: bold; /* Ensure it stands out */
+    color: rgb(155, 185, 240);
+}
+
+h2 {
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1.1;
+    text-wrap: balance;
+}

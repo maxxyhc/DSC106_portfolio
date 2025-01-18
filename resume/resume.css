@@ -1,0 +1,6 @@
+h1,h2{
+    color: rgb(155, 185, 240);
+}
+h3, p, time, li{
+    color: wheat;
+}

@@ -1,0 +1,37 @@
+input, textarea, button{
+    font: inherit; /* editing words style*/
+    box-sizing: border-box;
+    width: 100%;
+}
+  
+form {
+    display: grid; /*grid layout*/ 
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+label {
+    display: contents;
+    grid-template-columns: subgrid;
+    grid-column: 1/-1;
+    color: wheat;
+    
+}
+
+button {
+    grid-column: 1 / -1; /* Make the button span the entire row */
+    text-align: center; /* Center text inside the button */
+}
+
+button:hover {
+    background-color: wheat; /* Slightly darken the button on hover */
+}
+
+h1{
+    color: rgb(155, 185, 240);
+}
+
+p{
+    color: wheat;
+}

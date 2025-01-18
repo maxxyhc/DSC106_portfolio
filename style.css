@@ -1,3 +1,58 @@
 body {
-    font: 100%/1.5 system-ui;
-  }
+  background: url('images/background.jpg');
+  max-width: 80%;
+  margin-inline: auto;
+  line-height: 1.5;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  padding: 18px;
+}
+
+main {
+  background: rgb(119, 146, 155); /* White box for main content */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  margin: 2em auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+
+nav ul, nav li{
+  display: contents;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-evenly; /*space links evenly*/
+  align-items: center; /*vertically aligm items*/
+  margin-bottom: 1.5em; 
+  border-bottom: 1px solid rgba(200, 200, 200, 0.7);
+}
+
+/* Style for navigation links e.g. Home */
+nav a{
+  flex: 1; /* Make each link take equal space */
+  text-align: center; /* Center-align the text */
+  text-decoration: none; /* Remove underlines */
+  color:rgb(221, 206, 199); /* Change the color of nav */
+  padding: 0.5em;
+  font-weight: normal; /* Default font weight */
+  border-bottom: 4px solid transparent;
+  transition: border-color 0.3s ease;
+}
+nav a:hover {
+  border-bottom-color: var(--color-accent, lightgray); /* Accent color on hover */
+  background-color: rgba(173, 170, 170, 0.262); /* the nav links background color*/
+}
+
+nav a.current {
+  font-weight: bold; /* Highlight current link with bold text */
+  border-bottom-color: gray; /* Thicker border for the current page */
+} 
+
+:root {
+  --color-accent: rgba(255, 64, 89, 0.814); /*changing accent color*/
+}

@@ -35,3 +35,8 @@ h1{
 p{
     color: wheat;
 }
+
+label.color-scheme {
+    display: block !important;
+  }
+  

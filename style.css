@@ -63,9 +63,10 @@ nav a.current {
   color-scheme: light dark;
 }
 
+/* theme color */
 [data-theme="light"] {
   color-scheme: light;
-  --background-color: rgba(16, 198, 137, 0.868);
+  --background-color: rgba(25, 183, 175, 0.868);
   --text-color: #36454F;
 }
 /* For nav */
@@ -139,4 +140,67 @@ nav a.current {
   font-size: 100%;
   background: rgb(11, 170, 243);
   color: var(--text-color);
+}
+
+/* For github display style */
+#profile-stats {
+  border: 2px solid #ccc; /* Light gray border */
+  border-radius: 15px; /* Rounded corners */
+  /* background-color: #f9f9f9; /*Slightly off-white background */
+  max-width: 800px; /* Optional: limit the width */
+  margin: 20px 0 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 15px;
+  text-align: center;
+}
+
+#profile-stats dt {
+  grid-row: 1; /* All dt elements go in the first row */
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#profile-stats dd {
+  grid-row: 2; /* All dd elements go in the second row */
+  font-size: 2rem;
+  margin: 0;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive two columns */
+  gap: 20px; /* Space between projects */
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+/* better display for project on the home page */
+.projects article {
+  padding: 0;
+  background: none;
+  box-shadow: none; /* Remove shadow */
+  border: none;
+  text-align: left; /* Align project content to the left if desired */
+}
+
+.projects img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0; /* No rounded corners */
+}
+
+.projects h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.projects p {
+  font-size: 1rem;
+  margin-top: 10px;
 }

@@ -101,8 +101,8 @@ export async function fetchJSON(url) {
   }
 }
 
-const test = await fetchJSON('../lib/projects.json');
-console.log(test);
+// const test = await fetchJSON('../lib/projects.json');
+// console.log(test);
 
 //lab step 1.3
 export function renderProjects(project, containerElement, headingLevel = 'h2') {
@@ -133,6 +133,10 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
   }
 }
 
-const a = document.querySelector('.projects');
-const test2 = renderProjects(test, a, 'h3');
-console.log('Rendered articles:', test2);
+// const a = document.querySelector('.projects');
+// const test2 = renderProjects(test, a, 'h3');
+// console.log('Rendered articles:', test2);
+
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}

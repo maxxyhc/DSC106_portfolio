@@ -108,10 +108,18 @@ nav a.current {
     color: black; /* Change to desired text color */
 }
 
+[data-theme="light"] .color-scheme select {
+  background: rgb(161, 201, 250);
+}
+
 
 
 [data-theme="dark"] {
   color-scheme: dark;
+}
+
+[data-theme="dark"] .color-scheme select {
+  background: rgb(11, 170, 243);
 }
 
 
@@ -126,8 +134,9 @@ nav a.current {
   
 }
 
+/* changing the color for the theme background */ 
 .color-scheme select {
   font-size: 100%;
-  background: rgb(161, 201, 250);
+  background: rgb(11, 170, 243);
   color: var(--text-color);
 }

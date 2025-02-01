@@ -79,4 +79,60 @@ localStorage.setItem('theme', selectedTheme);
 const savedTheme = localStorage.getItem('theme') || 'auto';
 document.documentElement.setAttribute('data-theme', savedTheme);
 themeSwitcher.value = savedTheme;
+
+
+//lab4 step 1.2
+// Importing Project Data into the Projects Page
+export async function fetchJSON(url) {
+  try {
+      // Fetch the JSON file from the given URL
+      const response = await fetch(url);
+      // throw an error if the fetch request is not successful
+      if (!response.ok) {
+        throw new Error(`Failed to fetch projects: ${response.statusText}`);
+      }
+      console.log(response)
+
+      const data = await response.json();
+      return data;
+
+  } catch (error) {
+      console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+const test = await fetchJSON('../lib/projects.json');
+console.log(test);
+
+//lab step 1.3
+export function renderProjects(project, containerElement, headingLevel = 'h2') {
+  //  Validate containerElement
+  if(!containerElement || !(containerElement instanceof HTMLElement)){
+    console.error('Invalid container element.');
+    return;
+  }
+
+  // Validate if the project parameter is an array
+  if (!Array.isArray(project)) {
+    console.error('Invalid project data: Expected an array.');
+    return;
+  }
   
+  //Clear the container before rendering new content
+  containerElement.innerHTML = '';
+  for (let pro of project){
+    const article = document.createElement('article');
+
+  //Defining the Content Dynamically
+    article.innerHTML = `
+      <h3>${pro.title}</h3>
+      <img src="${pro.image}" alt="${pro.title}">
+      <p>${pro.description}</p>
+    `;
+    containerElement.appendChild(article);
+  }
+}
+
+const a = document.querySelector('.projects');
+const test2 = renderProjects(test, a, 'h3');
+console.log('Rendered articles:', test2);

@@ -12,12 +12,3 @@ projectsTitle.textContent = `${projects.length} Projects`;
 const isGitHubPages = window.location.hostname.includes('github.io');
 const basePath = isGitHubPages ? '/DSC106_portfolio/' : '/';
 
-// Function to adjust the image path dynamically
-function adjustImagePath(path) {
-    return `${basePath}${path}`;
-}
-
-// Modify project image paths before rendering
-for (let project of projects) {
-    project.image = adjustImagePath(project.image);
-}

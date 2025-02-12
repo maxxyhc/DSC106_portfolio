@@ -125,9 +125,12 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
 
   //Defining the Content Dynamically
     article.innerHTML = `
-      <h3>${pro.title}</h3>
-      <img src="${pro.image}" alt="${pro.title}">
-      <p>${pro.description}</p>
+    <div class="project-content">
+      <${headingLevel} class="project-title">${pro.title}</${headingLevel}>
+      <img src="${pro.image}" alt="${pro.title}" class="project-image">
+      <p class="project-description">${pro.description}</p>
+      <div class="project-year">© ${pro.year}</div>
+    </div>
     `;
     containerElement.appendChild(article);
   }

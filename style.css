@@ -204,3 +204,12 @@ nav a.current {
   font-size: 1rem;
   margin-top: 10px;
 }
+
+/* style for year under project */
+.project-year {
+  font-style: italic;
+  color: #666;
+  opacity: 0.7;
+  text-align: right;
+  margin-top: 8px;
+}

@@ -6,10 +6,11 @@
         "description": "Let's gooooo"
     },
     {
-        "title": "Eum eligendi quasi excepturi.",
-        "year" : "2023",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Tempora ducimus autem quas corporis architecto odio? Animi ratione nisi illum sed veritatis nam a quidem nobis, aspernatur beatae velit quo, dolorem quisquam magni dicta eaque, culpa totam suscipit eos."
+        "title": "Boston Bike Traffic Visualization",
+        "year" : "2025",
+        "image": "/DSC106_lab1/images/bikevis.png",
+        "url" : "https://maxxyhc.github.io/bikewatching/",
+        "description": "An interactive map visualization of Boston's bike traffic, showcasing bike lanes, stations, and trip patterns over time using Mapbox, D3.js, and real-world datasets."
     },
     {
         "title": "Sunt nulla facilis voluptate.",
